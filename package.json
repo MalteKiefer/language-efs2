@@ -1,0 +1,12 @@
+{
+  "name": "language-efs2",
+  "version": "1.7.0",
+  "private": false,
+  "description": "Efs2 syntax highlighting",
+  "repository": "https://github.com/maltekiefer/language-efs2",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,62 @@
+'name': 'Efs2file'
+'fileTypes': [
+  'Efs2file'
+]
+'patterns': [
+  {
+    'match': '(?i:^\\s*(from)\\s.*?(.+?\\s(as)\\s.*)?)',
+    'captures':
+      '1':
+        'name': 'keyword.control.efs2file'
+      '3':
+        'name': 'keyword.control.efs2file'
+  },
+  {
+    'match': '(?i:^\\s*(maintainer)\\s.*)',
+    'captures':
+      '1':
+        'name': 'keyword.control.efs2file'
+  }
+  {
+    'match': '(?i:^\\s*(onbuild\\s+)?(run|put|run cmd|run script)\\s)'
+    'captures':
+      '0':
+        'name': 'keyword.control.efs2file'
+      '1':
+        'name': 'keyword.other.special-method.efs2file'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.efs2file'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escaped.efs2file'
+      }
+    ]
+  }
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'string.quoted.single.efs2file'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escaped.efs2file'
+      }
+    ]
+  }
+  {
+      'match': '(?m)\\\\$'
+      'captures':
+        '0':
+            'name': 'keyword.control.efs2file'
+  }
+  {
+    'begin': '^\\s*#'
+    'end': '$'
+    'name': 'comment.block.efs2file'
+  }
+]
+'scopeName': 'source.efs2file'
